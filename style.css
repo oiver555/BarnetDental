@@ -1,0 +1,2145 @@
+/* 
+Theme Name: Medical Theme
+Author: Oliver Saintilien
+Version: 1.0.0
+*/
+
+:root {
+  --highlight: rgb(0, 107, 222);
+  --text-grey: rgb(80, 80, 80);
+}
+.blue-bkg {
+  background: var(--highlight);
+}
+.darker-blue-color {
+  color: rgb(0, 74, 153);
+}
+.grey-border-color {
+  border-color: rgba(129, 129, 129, 0.2);
+}
+.grey-bkg {
+  background: grey;
+}
+.white-bkg {
+  background: white;
+}
+.blue-color {
+  color: var(--highlight);
+}
+.grey-color {
+  color: var(--text-grey);
+}
+.white-color {
+  color: white;
+}
+.royal-blue-color {
+  color: royalblue;
+}
+.black-color {
+  color: black;
+}
+.d3d3d3 {
+  background: #d3d3d3;
+}
+input[type="range"]::-ms-thumb {
+  background-color: var(--highlight); /* Change to the desired color */
+}
+
+.circle-backdrop-white::before {
+  content: "";
+  padding: 10px;
+}
+.circle-backdrop-white {
+  background: rgba(255, 255, 255, 0);
+  line-height: 30px;
+  height: 0px;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: center;
+  transition:
+    background 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease;
+  pointer-events: fill;
+  cursor: pointer;
+}
+
+.circle-backdrop-white:hover {
+  background: rgba(255, 255, 255, 1);
+  width: 30px;
+  height: 30px;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--highlight); /* Change to the desired color */
+}
+body,
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100vh;
+  width: 99vw;
+  font-family:
+    Tilt Neon,
+    sans-serif;
+}
+/* 
+body {
+  padding-top: 32px !important;
+} */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+input {
+  /* padding-left: 10px; */
+  font-size: 20px;
+}
+
+.relative {
+  position: relative;
+}
+
+.fill {
+  height: 100%;
+  width: 100%;
+}
+
+.fit-image-cover {
+  object-fit: cover;
+}
+
+.header-container-home {
+  overflow: hidden;
+  height: 100%;
+  width: 90%;
+  right: 0;
+  z-index: 5;
+  position: absolute;
+  text-transform: capitalize;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.header-container {
+  overflow: hidden;
+  height: 17%;
+  width: 100%;
+  background: white;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  position: relative;
+}
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  pointer-events: fill;
+  height: 10%;
+  width: 100%;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.collage-container {
+  background: rgba(26, 113, 200, 1);
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 140%;
+  right: -50%;
+  height: 100%;
+  transform: skewX(40deg);
+  overflow: hidden;
+}
+
+.social-media-trim {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.social-media-container {
+  height: 7%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header-container-opaque {
+  opacity: 0.1;
+  pointer-events: none;
+}
+.background-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 33, 68, 1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 90;
+}
+
+#search-heading {
+  line-height: 0;
+  margin-top: 0;
+  transition: color 0.3s ease;
+}
+
+.search-suggested-categories {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 300px;
+  opacity: 0;
+  transition:
+    margin-top 0.5s ease,
+    width 0.5s ease,
+    opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 99;
+}
+.search-suggested-categories-mobile {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  height: 300px;
+  opacity: 0;
+  transition:
+    margin-top 0.5s ease,
+    width 0.5s ease,
+    opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+}
+
+.normal-text {
+  font-size: 22px;
+  line-height: 30px;
+  color: rgb(30, 30, 30);
+}
+.article-heading {
+  margin-top: 0;
+  font-size: xx-large;
+}
+.custom-bullet {
+  list-style-image: url("./images/sidebar-active-icon.webp"); /* Apply custom image as bullet point */
+  list-style-type: none; /* Hide default bullet point for this specific list item */
+  filter: hue-rotate(240deg);
+}
+
+.dropdown-button-color-change {
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+  border: 3px var(--text-grey) solid;
+  color: var(--text-grey);
+  background: white;
+  border-radius: 20px;
+  padding: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.search-icon-homepage {
+  position: absolute;
+  color: var(--highlight);
+  right: 15px;
+  font-size: 30px;
+}
+.search-icon-homepage-mobile {
+  position: absolute;
+  color: var(--highlight);
+  font-size: 30px;
+  /* z-index: 50; */
+  right: 15px;
+}
+
+.footer {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #006e9c;
+}
+.nav-sub-menu-container {
+  width: 100%;
+  background: white;
+  height: 100%;
+  transform: translateY(-350px);
+  border-radius: 0 0px 15px 15px;
+  transition: transform 0.3s ease;
+}
+.nav-sub-menu-container-up {
+  transform: translateY(0px);
+  pointer-events: fill;
+}
+
+.dropdown-button-color-change:hover {
+  transition: color 0.3s ease;
+  border-color: var(--highlight);
+  color: var(--highlight);
+}
+.dropdown-link-color-change {
+  transition: color 0.3s ease;
+  color: var(--text-grey);
+}
+
+.dropdown-link-color-change:hover {
+  color: var(--highlight);
+}
+
+.li-color-heading {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.li-color {
+  color: rgb(30, 30, 30);
+  transition: color 0.3s ease;
+}
+.li-color:hover,
+.li-color-heading:hover {
+  color: var(--highlight);
+}
+
+.flex-column-around {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.flex-row-around {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.align-items-c {
+  align-items: center;
+}
+
+.tilt-neon-nav {
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: large;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+.tilt-neon-landing-h1 {
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 5rem;
+  line-height: 0.6;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+.tilt-neon-landing-h3 {
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+  line-height: 0;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+.tilt-neon-btn {
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: medium;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+.chevron {
+  font-size: 12px;
+  margin-left: 8px;
+}
+.chevron-down {
+  font-size: 12px;
+  margin-left: 8px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  transform: rotateZ(0deg);
+  color: white;
+  opacity: 0;
+  position: relative;
+}
+
+.chevron-rotate {
+  transform: rotateZ(180deg);
+}
+
+.nav-btn {
+  transition: background 0.3s ease;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  padding: 20px 0px;
+  position: relative;
+  cursor: default;
+  user-select: none;
+}
+
+.hovered-nav {
+  opacity: 1;
+  background-color: orange;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: rgb(150, 150, 150);
+  font-style: italic;
+  font-size: medium;
+  letter-spacing: 1px;
+  padding-left: 8px;
+}
+
+input:hover {
+  cursor: text;
+}
+
+.search-input-container {
+  position: absolute;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  transition:
+    width 0.5s ease,
+    margin-top 0.5s ease;
+  z-index: 100;
+}
+
+.search-input-container-mobile {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  transition:
+    width 0.5s ease,
+    margin-top 0.5s ease;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1.5px solid #44b9ff;
+  position: relative;
+  /* z-index: 6; */
+}
+
+.search-input > i {
+  color: rgb(150, 150, 150);
+  font-size: 26px;
+  position: absolute;
+  right: 8px;
+}
+
+#live-results-container {
+  position: absolute;
+  width: 100%; 
+  max-height: 400px;
+  overflow: auto;
+  background: white;
+  bottom: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease;
+  border-radius: 0 0 8px 8px;
+  color: black;
+  box-sizing: border-box;
+ }
+.z-index {
+  z-index: 1000;
+}
+.spinner-1-blue {
+  position: relative;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
+  right: 5px;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.spinner-1-blue svg {
+  width: auto !important;
+}
+.expand-input {
+  width: 90%;
+  margin-top: -30%;
+  opacity: 1;
+}
+.expand-input-mobile {
+  margin-top: -95%;
+  opacity: 1;
+}
+
+.background-overlay-reveal {
+  opacity: 0.96;
+  pointer-events: fill;
+}
+
+.no-events {
+  pointer-events: none;
+}
+.yes-events {
+  pointer-events: fill;
+}
+
+.search-close {
+  position: absolute;
+  font-optical-sizing: auto;
+  font-variation-settings:
+    XROT 0,
+    YROT 0;
+  right: 20px;
+  bottom: 100px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  pointer-events: none;
+  line-height: 0;
+  align-items: center;
+  font-family:
+    Tilt Neon,
+    sans-serif;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* LOCATIONS */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style-type: none;
+  padding: 0;
+  overflow: auto;
+  height: 200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: black;
+  display: none;
+}
+
+.dropdown-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.shadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.shadow-sharp {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+.slider-container {
+  position: relative;
+  width: 80%;
+}
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 15px;
+  height: 10px;
+}
+.slider::-webkit-slider-thumb::after {
+  content: attr(data-value);
+  position: absolute;
+  top: -25px; /* Adjust position as needed */
+  left: 50%; /* Adjust position as needed */
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 15px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+#my-location-input {
+  height: 100%;
+  width: 100%;
+  color: black;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  border: 0;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+.my-location-input-fade-in {
+  background: rgb(100, 100, 100) !important;
+}
+
+#loadingOverlay {
+  position: fixed; /* Cover the whole viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Ensure it is on top of other elements */
+}
+
+.loadingIcon img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+}
+
+#loading-1-animation {
+  position: absolute;
+  z-index: 5;
+  height: 70%;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+#loading-2-animation {
+  position: absolute;
+  z-index: 5;
+  height: 500px;
+  width: 500px;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.dentist-item {
+  flex: 0 1 max(225px, calc((100% - 20px) / 3));
+  width: 95%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  background: rgb(240, 240, 240);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.inactive {
+  color: grey;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.hide-on-hover:hover {
+  transition: all ease 0.2s;
+  opacity: 0;
+}
+
+.remove {
+  display: none !important;
+}
+
+.restore {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+/* Doctors Page */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider-switch:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider-switch {
+  background-color: #2196f3;
+}
+
+input:focus + .slider-switch {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider-switch:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider-switch.round {
+  border-radius: 34px;
+}
+
+.slider-switch.round:before {
+  border-radius: 50%;
+}
+
+/* SWITCH */
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.switch-container input[type="radio"] {
+  display: none;
+}
+
+.switch-label {
+  position: relative;
+  width: 120px; /* Adjust width to accommodate both options */
+  height: 30px;
+  background-color: rgb(105, 105, 105);
+  border-radius: 15px;
+  border: 2px orange solid;
+}
+
+.switch-label label {
+  position: absolute;
+  top: 0;
+  width: 50%; /* Half of switch width */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.list-map-slider {
+  position: absolute;
+  top: 0;
+  width: 50%; /* Half of switch width */
+  height: 100%;
+  background-color: white;
+  border-radius: 15px;
+  transition:
+    transform 0.3s,
+    color 0.3s;
+  outline: 3px orange solid;
+  color: black;
+}
+
+#list-option:checked ~ .switch-label .list-map-slider {
+  transform: translateX(0);
+}
+
+#map-option:checked ~ .switch-label .list-map-slider {
+  transform: translateX(100%);
+}
+
+.switch-label label:nth-child(2) {
+  /* Your styles for the second label */
+  /* For example, changing the color */
+  color: lightgray;
+  right: 0;
+}
+
+.slider-thumb-grey::-webkit-slider-thumb {
+  background-color: grey; /* Change to the desired color */
+}
+.slider-thumb-active::-webkit-slider-thumb {
+  background-color: var(--highlight); /* Change to the desired color */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#loading-2-animation-bkg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.search-suggested-item {
+  padding-left: 20px;
+  color: black;
+  background: white;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.search-suggested-item:hover {
+  color: white;
+  background: var(--highlight);
+}
+
+.dentist-specialty:hover {
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+  border: 1px orange solid;
+}
+
+#alphabet-list a:hover {
+  color: var(--highlight);
+}
+
+.request-appt-container {
+  flex: 0.4;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 7%, 0% 7%);
+  overflow: hidden;
+}
+
+.hero-section-mobile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  color: white;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.collage-container-mobile {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: blur(5px) brightness(0.5);
+}
+.hero-section-search-container-mobile {
+  position: absolute;
+  bottom: 15%;
+  margin-left: 100px;
+  height: 55px;
+  width: 100%;
+}
+.hero-section-search-container-expanded-mobile {
+  position: absolute;
+  bottom: 15%;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hide-menu-mobile-left {
+  transform: translateX(-100%);
+}
+.show-menu-mobile {
+  transform: translateX(0%);
+}
+.location-medical-center-link,
+.location-urgent-care-link,
+.location-school-link,
+.location-specialty-care-link,
+.location-orthodontics-link,
+.location-all-link,
+.pointer {
+  cursor: pointer;
+}
+
+.link-hover-color:hover a,
+.link-hover-color:hover {
+  transition: all ease 0.2s;
+  background: orange;
+  border-color: orange;
+  color: white;
+}
+
+.link-light {
+  border-radius: 20px;
+  color: rgb(26, 113, 200);
+  border: 0;
+  background: white;
+  border: 2px solid rgb(26, 113, 200);
+  font-size: 15px;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+.medium-content-card {
+  height: 250px;
+  background: rgb(26, 113, 200);
+  border-radius: 15px;
+  flex: min(300px, (100% - 20px)/2);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0 10px;
+  flex-direction: column;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+.single-event-description-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+  gap: 45px;
+}
+/* MOBILE */
+@media screen and (max-width: 900px) {
+  .hero-section,
+  .header-container-home,
+  .header-container,
+  .collage-container,
+  .footer,
+  .filter-container,
+  .dentist-item,
+  .responsive-toggle-display,
+  .services-header-section,
+  .featured-services,
+  .search-input-container-1,
+  .template-banner-1,
+  .breadcrumb-nav,
+  .sidebar-nav-left,
+  .sidebar-nav-right,
+  .template-banner-2,
+  .template-banner-full-width-1,
+  .events-filter-container,
+  .event-list-item,
+  .single-event-date-container,
+  .single-event-title-container,
+  .single-location-procedures,
+  .single-procedure-title-container {
+    display: none;
+  }
+
+  .archive-testimonial-main-container {
+    padding: 0 20px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 50px;
+  }
+  .archive-testimonial-main-content {
+    flex: 0.75;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: flex-start;
+    padding-left: 3%;
+  }
+  .archive-testimonial-main-content-flex-item-1 {
+    flex: 1 0 250px;
+    height: 250px;
+    position: relative;
+    background: white;
+    border-radius: 15px;
+  }
+  .archive-testimonial-main-content-flex-item-button {
+    display: none;
+    bottom: -50px;
+    left: 30%;
+  }
+  .archive-testimonial-main-content-2 {
+    flex: 1 0 250px; 
+    display: flex; 
+    margin-top: 25px;
+    gap: 25px;
+    flex-direction: column;
+  }
+
+  .single-location-get-directions-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 18px;
+    padding-left: 15px;
+  }
+  .single-location-description {
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .uber-icon {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    display: inline-block;
+  }
+  .lyft-icon {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    display: inline-block;
+  }
+
+  .single-event-title-container-mobile {
+    display: block;
+  }
+  .single-event-date-container-mobile {
+    display: block;
+  }
+  .single-event-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .single-dentist-main-content,
+  .single-location-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    margin-bottom: 50px;
+  }
+
+  .single-event-description-container {
+    height: 100%;
+  }
+  .event-list-item-mobile {
+    width: 90%;
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .events-main-content {
+    flex: 1;
+
+    position: relative;
+    align-items: center;
+  }
+  .template-banner-full-width-1-mobile {
+    height: 100%;
+    width: 100%;
+    margin-top: 85px;
+    position: relative;
+  }
+  .section-menu-btn-mobile {
+    width: 80%;
+    border-radius: 15px;
+    padding: 15px 0;
+    margin: 0 auto;
+    height: 30px;
+    background: rgb(245, 245, 245);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .template-main-content {
+    width: 100vw;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: 25px;
+  }
+  .template-full-width-main-content {
+    padding: 0 15px;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 50px 0 80px 0;
+  }
+  .template-left-sidebar-main-content {
+    flex: 1;
+    padding: 0 10px;
+  }
+  .single-procedure-title-image-container {
+    margin-left: auto;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+  }
+  .template-banner-full-width-gradient-image {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    padding: 25px 0;
+    position: relative;
+    background-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url("<?php echo get_site_url() ?>/wp-content/uploads/2024/05/telehealth_banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .sidebar-nav-left-mobile {
+    height: 500px;
+    flex: 0.2;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .template-secondary-content {
+    width: 100%;
+    min-height: 250px;
+    max-height: 350px;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .template-secondary-content h1 {
+    font-size: xx-large;
+    word-break: break-all;
+  }
+
+  .flex-row-between {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .template-banner-1-mobile,
+  .template-banner-2-mobile {
+    margin-top: 85px;
+  }
+
+  .breadcrumb-nav-mobile {
+    width: 80%;
+    top: 10px;
+    position: relative;
+    margin: 0 auto;
+    background: lightgrey;
+    border-radius: 15px;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+  }
+  .breadcrumb-nav-mobile-elongated {
+    max-height: 2000px;
+  }
+  .search-input-container-1-mobile {
+    isolation: isolate;
+    width: 90%;
+    flex: 0.3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 60;
+  }
+  .service-letter-true-li {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: white;
+  }
+  .service-letter-false-li {
+    color: white;
+    position: relative;
+    right: 10px;
+    opacity: 0.4;
+  }
+  .services-list-section {
+    isolation: isolate;
+    width: 100vw;
+    height: 100%;
+  }
+  .services-a-z-container {
+    position: relative;
+    height: 50px;
+  }
+  .services-a-z-container + nav {
+    padding: 0px 0;
+    height: 30px;
+  }
+  .services-browse-a-z {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  }
+  .services-list-div {
+    position: relative;
+    display: flex;
+    bottom: 65px;
+  }
+  .services-header-section-mobile {
+    width: 100%;
+    min-height: 200px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 0;
+    position: relative;
+  }
+  .location-list-map-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .location-list-map-section {
+    width: 100%;
+    isolation: isolate;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    z-index: 50;
+  }
+  .filter-location-item {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    pointer-events: fill;
+  }
+  .filter-events-container-mobile {
+    color: white;
+    isolation: isolate;
+    width: 90%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 50;
+  }
+  .filter-events-container-mobile {
+    color: white;
+    isolation: isolate;
+    width: 90%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 50;
+  }
+  .header-location-title-container {
+    isolation: isolate;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 130px;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .header-location {
+    width: 100%;
+    min-height: 160px;
+    height: 0vh;
+    position: relative;
+    transition: height 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dentist-item-mobile {
+    min-height: 300px;
+    background: rgb(240, 240, 240);
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+  .dentist-specialty {
+    font-size: 14px;
+    margin: 0;
+    border: 1px grey solid;
+    color: grey;
+    font-weight: bold;
+    padding: 5px 5px;
+    border-radius: 5px;
+    transition:
+      color 0.3s ease,
+      background 0.3s ease;
+  }
+  .list-container {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0 0px 0;
+    position: relative;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .search-input-width {
+    width: 90%;
+  }
+  .page-find-a-dentist-map {
+    flex: 75% 1 75%;
+    min-height: 400px;
+    width: 100%;
+    padding: 25px 0 45px 0;
+  }
+
+  .responsive-toggle-display-flex {
+    display: flex;
+  }
+
+  .request-appt-container {
+    flex: 0.4;
+    display: none;
+  }
+  body > div:first-of-type {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .scroll-down-container {
+    flex: 0.4;
+    display: none;
+  }
+  .filter-container-mobile {
+    width: 100%;
+    z-index: 100;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    position: fixed;
+    top: 85px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    transition: transform 0.3s ease;
+  }
+  .header-container-mobile {
+    height: 85px;
+    width: 100vw;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
+  .sidebar-menu-mobile {
+    transition: 0.3s transform ease;
+    width: 85%;
+    height: 100vh;
+    background: white;
+    right: 0;
+    top: 101px;
+    overflow: scroll;
+    display: block;
+    z-index: 101;
+    position: fixed;
+  }
+  .header-margin {
+    margin-top: 85px;
+  }
+  .dentists-map-switch-container {
+    position: absolute;
+    transform: translateY(-50%);
+    height: 60px;
+    min-width: 90%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 450;
+  }
+  .miles-slider-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .view-all-container {
+    padding: 5px 0 5px 20px;
+  }
+  .single-event-repeats-container {
+    width: 100vw;
+    margin-bottom: 50px;
+  }
+  .single-dentist-profile-container {
+    height: 350px;
+    width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .single-dentist-name-container {
+    margin: auto;
+  }
+  .single-dentist-description-container {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    padding: 20px;
+  }
+  .single-dentist-description-container > div {
+    text-align: center;
+    position: relative;
+  }
+
+  .single-dentist-description-container div:nth-of-type(2) {
+    position: relative;
+    text-align: left;
+  }
+  .single-dentist-description-container div:nth-of-type(2) ul {
+    font-size: 18px;
+    position: relative;
+    letter-spacing: 2px;
+    line-height: 25px;
+    padding: revert;
+    list-style-type: disc;
+  }
+
+  .single-dentist-fill-in {
+    display: none;
+  }
+  .filter-location-container {
+    color: white;
+    isolation: isolate;
+    z-index: 50;
+    width: 90%;
+    flex: 0.35;
+    flex-direction: column;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    bottom: 50px;
+    position: absolute;
+  }
+
+  .single-location-type-label-container {
+    margin-top: 25px;
+  }
+  .single-procedure-image-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .single-procedure-description {
+    padding: 0 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+}
+
+.single-location-title-container {
+  text-align: center;
+}
+/* DESKTOP */
+@media screen and (min-width: 900px) {
+  .hero-section-mobile,
+  .collage-container-mobile,
+  .header-container-mobile,
+  .sidebar-menu-mobile,
+  .footer-mobile,
+  .filter-container-mobile,
+  .responsive-toggle-display-flex,
+  .services-header-section-mobile,
+  .search-input-container-1-mobile,
+  .sidebar-nav-left-mobile,
+  .template-banner-1-mobile,
+  .section-menu-btn-mobile,
+  .event-list-item-mobile,
+  .filter-events-container-mobile,
+  .single-event-date-container-mobile,
+  .single-event-title-container-mobile,
+  .single-procedure-title-container-mobile,
+  .template-banner-2-mobile {
+    display: none;
+  }
+
+  .archive-testimonial-main-container {
+    padding: 0 20px 50px 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+  }
+
+  .archive-testimonial-main-content {
+    flex: 0.75;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: -0px;
+    column-gap: 25px;
+    justify-content: flex-start;
+    padding-left: 3%;
+  }
+  .archive-testimonial-main-content-flex-item-1 {
+    flex: 0 0 30%;
+    height: 250px;
+    position: relative;
+    background: white;
+    border-radius: 15px;
+  }
+  .archive-testimonial-main-content-flex-item-button {
+    display: none;
+    position: absolute;
+    bottom: -50px;
+    left: 30%;
+  }
+  .archive-testimonial-main-content-2 {
+    flex: 0.25;
+    height: 800px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+  }
+  .single-procedure-title-image-container {
+    width: 95%;
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+  }
+  .single-procedure-image-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .uber-icon {
+    width: 25px;
+    height: 25px;
+
+    background-size: contain;
+    display: inline-block;
+  }
+  .lyft-icon {
+    width: 25px;
+    height: 25px;
+
+    background-size: contain;
+    display: inline-block;
+  }
+
+  .single-location-procedures {
+    height: 40%;
+    width: 100%;
+    border-radius: 15px;
+    background: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .single-location-get-directions-container {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 18px;
+  }
+  .single-dentist-fill-in {
+    display: flex;
+    background: orange;
+    user-select: none;
+    opacity: 0;
+  }
+  .single-event-title-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: 300px;
+  }
+  .single-procedure-description {
+    padding: 0 130px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .single-dentist-name-container {
+    margin-left: 40px;
+  }
+  .single-dentist-description-container > div {
+    left: 40px;
+    position: relative;
+  }
+  .single-location-description {
+    height: 100%;
+    flex: 0.6;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .single-dentist-description-container div:nth-of-type(2) {
+    width: 90%;
+    position: relative;
+    left: 40px;
+  }
+  .single-dentist-description-container div:nth-of-type(2) ul {
+    font-size: 18px;
+    position: relative;
+    letter-spacing: 2px;
+    line-height: 25px;
+    padding: revert;
+    left: 40px;
+    list-style-type: disc;
+  }
+  .single-dentist-description-container {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+  }
+
+  .single-event-date-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .single-event-main-content {
+    display: block;
+    padding: 0 50px;
+    position: relative;
+  }
+  .single-location-title {
+    font-size: xxx-large;
+    margin: 0;
+  }
+  .single-dentist-main-content {
+    padding: 0 130px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+  }
+  .single-location-main-content {
+    padding: 0 130px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-direction: column;
+    position: relative;
+  }
+  .single-dentist-profile-container {
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .single-event-repeats-container {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .events-filter-container {
+    flex: 0.25;
+    /* background: teal; */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+  }
+  .events-main-content {
+    flex: 0.75;
+    /* background: red; */
+    position: relative;
+  }
+  .event-list-item {
+    width: 90%;
+    overflow: hidden;
+    padding-bottom: 60px;
+    margin-top: 50px;
+    border-bottom: 1px grey solid;
+  }
+  .template-banner-full-width-1 {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    padding: 25px 0;
+    position: relative;
+  }
+  .template-main-content {
+    flex: 0.55;
+  }
+  .template-full-width-main-content {
+    padding: 0 100px;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 50px 0 80px 0;
+  }
+  .template-left-sidebar-main-content {
+    flex: 0.75;
+    padding-right: 50px;
+  }
+  .template-secondary-content {
+    width: 100%;
+    min-height: 250px;
+    max-height: 350px;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  .template-secondary-content h1 {
+    font-size: xx-large;
+    line-height: 0;
+  }
+  .template-secondary-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .flex-row-between {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sidebar-nav-left {
+    height: 500px;
+    flex: 0.2;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .page-find-a-dentist-map {
+    flex: 0.75;
+    min-height: 400px;
+    padding: 25px 0 45px 0;
+  }
+  .single-procedure-title-container {
+    flex: 0.5;
+    height: 80%;
+  }
+  .sidebar-nav-right {
+    height: 1000px;
+    flex: 0.2;
+    font-size: 16px;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .breadcrumb-nav {
+    height: 70px;
+    width: 95%;
+    position: relative;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-end;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .template-banner-1 {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .template-banner-2 {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .search-input-container-1 {
+    isolation: isolate;
+    width: 90%;
+    flex: 0.3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 60;
+  }
+  .featured-services {
+    background: white;
+    border-radius: 15px;
+    padding: 15px 0;
+  }
+  .service-letter-true-li {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: rgb(0, 74, 153);
+  }
+  .service-letter-false-li {
+    color: rgb(0, 74, 153);
+    position: relative;
+    right: 10px;
+    opacity: 0.4;
+  }
+  .services-browse-a-z {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .services-list-div {
+    flex: 0.7;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .services-list-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    isolation: isolate;
+    width: 100%;
+    height: 100%;
+  }
+  .services-header-section {
+    width: 100%;
+    height: 200px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+  .location-list-map-section {
+    width: 100%;
+    isolation: isolate;
+    height: 700px;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    z-index: 50;
+  }
+  .location-list-map-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+  }
+
+  .filter-location-item {
+    flex: 0.24;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    pointer-events: fill;
+  }
+  .header-location-title-container {
+    isolation: isolate;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .filter-location-container {
+    color: white;
+    isolation: isolate;
+    z-index: 50;
+    width: 90%;
+    flex: 0.35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+  }
+  .dentist-item-mobile {
+    display: none;
+  }
+  .dentist-specialty {
+    font-size: 18px;
+    margin: 0;
+    border: 1px grey solid;
+    color: grey;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition:
+      color 0.3s ease,
+      background 0.3s ease;
+  }
+
+  .list-container {
+    flex: 0.75;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0 0px 0;
+    position: relative;
+  }
+  .miles-slider-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .search-input-width {
+    width: 80%;
+  }
+  .filter-container {
+    flex: 0.25;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+  }
+
+  .dentists-map-switch-container {
+    position: absolute;
+    transform: translateY(-50%);
+    height: 60px;
+    min-width: 30%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 450;
+  }
+  .header-margin {
+    margin-top: 0px;
+  }
+
+  .view-all-container {
+    padding: 5px 0 5px 130px;
+  }
+
+  .scroll-down-container {
+    flex: 0.4;
+    display: block;
+  }
+  .hero-section {
+    position: absolute;
+    z-index: 4;
+    width: 90%;
+    right: 0;
+    top: 25%;
+    color: white;
+  }
+  .header-location {
+    width: 100%;
+    height: 300px;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    transition: height 0.3s ease;
+  }
+}
+
+.nav-icons-mobile > i {
+  margin-right: 20px;
+  font-size: 26px;
+}
+
+.sidebar-menu-mobile-close {
+  transform: translateX(100%);
+}
+
+.sidebar-menu-mobile-open {
+  transform: translateX(0%);
+}
+
+.sidebar-menu-mobile li > div:first-child,
+.sidebar-menu-mobile + ul a {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* .sidebar-menu-mobile li:nth-child(n + 4) {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto;
+  color: inherit;
+  text-decoration: none;
+} */
+.sidebar-menu-close {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sidebar-menu-close > div {
+  color: grey;
+  font-size: 12px;
+}
+.sidebar-menu-header-mobile {
+  height: 100px;
+  width: 85%;
+  right: 0;
+  top: 0;
+  z-index: 101;
+  background: white;
+  transition: 0.3s transform ease;
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header-location-elongated-mobile {
+  height: 85vh;
+}
+.reveal {
+  opacity: 1;
+}
