@@ -61,7 +61,7 @@ $find_a_dentist_page_id = 446;
     } else if (is_single()) {
         $post_id = get_the_ID();
 
-        if (is_single(('dentist'))) {
+        if (is_single('dentist')) {
     ?>
             <title>Dr. <?php echo esc_html(get_field("first-name", $post_id)); ?> <?php echo esc_html(get_field("last-name", $post_id)); ?> &mdash; <?php echo esc_html(get_field("profession", $post_id)); ?> at Barnet Dental</title>
             <meta name="keywords" content="Dr. <?php echo esc_attr(get_field('first-name', $post_id)); ?> <?php echo esc_attr(get_field('last-name', $post_id)); ?>, <?php echo esc_attr(get_field('profession', $post_id)); ?>, <?php echo esc_attr(get_field('title', $post_id)); ?>, Barnet Dental, dental care, dentistry, <?php echo esc_attr(get_field('state', $post_id)); ?>">
@@ -70,9 +70,8 @@ $find_a_dentist_page_id = 446;
             <meta property="og:description" content="<?php echo esc_attr(get_field("meta-og-description", $post_id)); ?>">
             <meta property="og:image" content="<?php echo esc_url(get_field("meta-og-image", $post_id)); ?>">
             <meta property="og:url" content="<?php echo esc_url(get_field("meta-og-url", $post_id)); ?>">
-    <?
+    <?php
         } elseif (is_single(('Event'))) {
-
         }
     }
 
