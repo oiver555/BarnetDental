@@ -19,7 +19,7 @@ $find_a_dentist_page_id = 446;
 //   } elseif ($curr_location_id === $location_page_id) {   
 //     $canonical_url = get_permalink($location_page_id);
 //   }  else {
-// 	  $canonical_url = get_permalink();
+// 	  $canonical_url = get_permalink()
 //   }
 
 ?>
